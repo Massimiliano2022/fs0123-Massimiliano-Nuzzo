@@ -20,13 +20,27 @@
         table td{
             border: 1px solid black;
         }
+        aside>h2{
+            text-align: center;
+        }
+        #correlati{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #correlati>div{
+            flex:1;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <img src="img/logo.svg" alt="Logo">
-        <p>Epicode - Il blog dei developers</p>
+        <div id="logo">
+            <img src="img/logo.svg" alt="Logo">
+            <p>Epicode - Il blog dei developers</p>
+         </div>
         <nav>
             <a href="#">Home</a>
             <a href="#">Articoli</a>
@@ -117,20 +131,22 @@
     </main>
     <aside>
         <h2>Articoli correlati</h2>
-        <section id="correlato1">
-            <h3>Validare il codice HTML</h3>
-            <p>Categoria: develop</p>
-            <p>Data: 16/09/2020</p>
-        </section>
-        <section id="correlato2">
-            <h3>Correggere la sintassi</h3>
-            <p>Categoria: develop</p>
-            <p>Data: 18/09/2020</p>
-        </section>
-        <section id="correlato3">
-            <h3>Meno kb nella pagina</h3>
-            <p>Categoria: ottimizzazione</p>
-            <p>Data: 30/09/2020</p>
+        <section id="correlati">
+            <div id="correlato1">
+                <h3>Validare il codice HTML</h3>
+                <p>Categoria: develop</p>
+                <p>Data: 16/09/2020</p>
+            </div>
+            <div id="correlato2">
+                <h3>Correggere la sintassi</h3>
+                <p>Categoria: develop</p>
+                <p>Data: 18/09/2020</p>
+            </div>
+            <div id="correlato3">
+                <h3>Meno kb nella pagina</h3>
+                <p>Categoria: ottimizzazione</p>
+                <p>Data: 30/09/2020</p>
+            </div>
         </section>
     </aside>
     <footer>
