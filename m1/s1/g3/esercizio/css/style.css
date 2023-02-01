@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Utility */
+html,body{
+    font-family: 'Vesper Libre', serif;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+p{
+    font-size:1.25rem;
+}
+h1,h2,p,li{
+    color:#333333;
+}
+.horizontal-line{
+    border:2px solid #C4F3F2;
+}
+/* Inizio header */
+header{
+    text-align: center;
+}
+header #logo{
+    padding-bottom:1rem;
+}
+header #frase{
+    background:#FDFBF1;
+    padding: 1rem 0;
+    border-top: 2px solid #FFD877;
+    color:#004D4C;
+}
+header #frase strong{
+    font-weight: bolder;
+}
+/* Fine header */
+
+/* Inizio main */
+main{
+    margin: 0 15rem;
+}
+main h1{
+    text-align: center;
+    margin: 2rem 5rem;
+    font-weight: bold;
+}
+main #img{
+    background: url(/g3/esercizio/img/focaccia.png) no-repeat center center/cover;
+    height: 525px;
+    border-radius: 12px;
+    margin: auto;
+}
+
+/* section - principale */
+main section#principale p{
+    margin:1rem 0;
+}
+main section#principale p#crediti{
+    text-align: center;
+    color:#A2A2A2;
+}
+main section#principale div#featured-p{
+    padding-left: 1rem;
+    border-left: 5px solid #FFDC85;
+    height: 5rem;
+}
+main section#principale div#featured-p p{
+    color:#B5460F;
+    font-weight: bold;
+}
+main section#principale div#featured-p a{
+    color:#167979;
+}
+/* section - principale */
+
+/* section - ingredienti */
+main section#ingredienti h2{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+main section#ingredienti p{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.contenuto-ingredienti ul {
+    padding-left: 2rem;
+}
+.contenuto-ingredienti ul li{
+    line-height: 2;
+}
+/* section - ingredienti */
+
+/* section - method */
+main section#method h2{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+main section#method ol>li{
+    margin: 2rem 0;
+}
+#method ol {
+    padding-left: 2rem;   
+}
+#method #bold{
+    font-weight: bold;
+}
+main section#method p{
+    margin-bottom: 2rem;
+}
+/* section - method */
+/* Fine main */
+
+/* Inizio footer */
+footer{
+    margin: 0 15rem;
+}
+footer p{
+    padding-bottom:1rem;
+}
+footer a{
+    color:#167979;
+}
+/* Fine footer */
+
+/* responsive */
+@media(max-width:500px){
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size:1rem;
+    }
+    header #frase{
+        padding:0 3rem;
+    }
+    main,footer{
+        margin: 0 3rem;
+    }
+    main h1{
+        margin:0;
+    }
+}
+@media screen and (max-width: 992px) {
+    main,footer{
+        margin: 0 6rem;
+    }
+    main h1{
+        margin:3rem;
+    }
+}
+/* responsive */

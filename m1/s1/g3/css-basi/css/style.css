@@ -1,0 +1,19 @@
+/*
+selettore{
+    proprietà/regola : valore;
+    proprietà/regola : valore;
+    proprietà/regola : valore;
+}
+*/
+
+div{
+    background: blue;
+    color:red;
+}
+div span{
+    color:white;
+}
+
+div , span {
+    border: 1px solid black;
+}
