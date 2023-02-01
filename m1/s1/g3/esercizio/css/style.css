@@ -29,11 +29,13 @@ header{
 header #logo{
     padding-bottom:1rem;
 }
+header p#special{
+    color:#004D4C;
+}
 header #frase{
     background:#FDFBF1;
     padding: 1rem 0;
     border-top: 2px solid #FFD877;
-    color:#004D4C;
 }
 header #frase strong{
     font-weight: bolder;
