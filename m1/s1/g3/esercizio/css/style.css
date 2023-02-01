@@ -48,7 +48,7 @@ main{
 }
 main h1{
     text-align: center;
-    margin: 2rem 5rem;
+    margin: 2rem 3rem;
     font-weight: bold;
 }
 main #img{
@@ -131,7 +131,33 @@ footer a{
 /* Fine footer */
 
 /* responsive */
-@media(max-width:500px){
+@media only screen and (max-width: 576px){
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size:1rem;
+    }
+    header #frase{
+        padding:0 3rem;
+    }
+    main,footer{
+        margin: 0 3rem;
+    }
+    main h1{
+        margin: 1rem 0;
+    }
+    main #img{
+        height: 400px;
+    }
+    main section#principale div#featured-p{
+        height: 7rem;   
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
     h1{
         font-size: 2rem;
     }
@@ -150,8 +176,8 @@ footer a{
     main h1{
         margin:0;
     }
-}
-@media screen and (max-width: 992px) {
+}    
+@media only screen and (min-width: 768px) and (max-width: 992px) {
     main,footer{
         margin: 0 6rem;
     }
