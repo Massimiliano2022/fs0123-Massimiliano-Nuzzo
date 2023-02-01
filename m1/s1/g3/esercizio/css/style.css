@@ -27,7 +27,7 @@ header{
     text-align: center;
 }
 header #logo{
-    padding-bottom:1rem;
+    padding: 2rem 0;
 }
 header p#special{
     color:#004D4C;
