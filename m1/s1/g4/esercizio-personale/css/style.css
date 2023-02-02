@@ -5,7 +5,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background: url(/s1/g4/esercizio/img/sfondo.png);
+    background: url(/s1/g4/esercizio-personale/img/sfondo.png);
 }
 header,main,footer{
     margin:1rem;
@@ -18,9 +18,16 @@ header,main,footer{
     color:#009FCA;
     text-decoration: underline;
 }
+.background-grigio{
+    background: #DEE5E6;
+}
 a{
     text-decoration: none;
 }
+section{
+    margin:1rem 0;
+}
+
 /* HEADER */
 
 header{
@@ -51,7 +58,7 @@ nav div.link{
 }
 
 /* MAIN */
-
+/* ELEMENTI NEL MAIN - ARTICLE */
 main{
     background: #fff;
 }
@@ -73,6 +80,7 @@ main ul, main ol{
     padding-bottom: 1rem;
     padding-left:2rem;
 }
+/* TABELLE */
 main table caption{
     font-weight: bold;
 }
@@ -93,13 +101,47 @@ main table td{
 main article div.tabella{
     padding-bottom:2rem;
 }
-
-/* ELEMENTI NEL MAIN - ARTICLE */
-
 /* TABELLE */
-
+main section h2{
+    font-weight: bold;
+    text-align: center;
+    color:#2A3338;
+    padding:1rem 0;
+}
 /* FORM */
-
+main section div#form-novita{
+    padding:1rem;
+}
+main section div#form-novita form input{
+    border:0;
+    border-bottom: 2.5px dotted #4E474B;
+    width:55%;
+}
+main section div#form-novita form button{
+    background:#4067C1;
+    color:#fff;
+    font-weight: bold;
+    border:0;
+    width: 40%;
+}
+/* FORM */
 /* ELEMENTI NELL' ASIDE */
-
+aside h2{
+    text-align: center;
+    margin: 1rem 0;
+}
+aside div.correlati{
+    border:3px solid #E0DDDF;
+    margin:1rem 0;
+}
+aside div.contenuto-correlati{
+    padding:1rem;
+}
+/* ELEMENTI NELL' ASIDE */
 /* FOOTER */
+footer{
+    background: #055368;
+}
+
+
+
