@@ -56,7 +56,18 @@ nav .link a{
 nav div.link{
     padding-bottom:0.5rem;
 }
-
+/*nav div.link a::before{
+    content: "&rarr;";
+}
+nav div.link a::after{
+    content: "&larr;";
+}*/
+nav div.link a::before{
+    content: "→";
+}
+nav div.link a::after{
+    content: "←";
+}
 /* MAIN */
 /* ELEMENTI NEL MAIN - ARTICLE */
 main{
