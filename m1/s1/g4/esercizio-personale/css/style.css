@@ -141,7 +141,20 @@ aside div.contenuto-correlati{
 /* FOOTER */
 footer{
     background: #055368;
+    color:white;
 }
-
+footer p{
+    padding: 1rem 0;
+    text-align: center;
+}
+footer address{
+    padding:0 1rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+footer address a{
+    color:#FF00FE;
+}
+/* FOOTER */
 
 
