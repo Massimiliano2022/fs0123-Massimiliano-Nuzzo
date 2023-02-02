@@ -72,6 +72,9 @@ main article{
 main p{
     padding-bottom: 1rem;
 }
+main p.data-right{
+    text-align: right;
+}
 main p#crediti{
     padding:1rem 0;
     color:#96A49F;
