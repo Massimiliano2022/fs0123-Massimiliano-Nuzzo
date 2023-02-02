@@ -80,6 +80,9 @@ main ul, main ol{
     padding-bottom: 1rem;
     padding-left:2rem;
 }
+main article iframe{
+    width: 100%;
+}
 /* TABELLE */
 main table caption{
     font-weight: bold;
@@ -129,6 +132,7 @@ main section div#form-novita form button{
 aside h2{
     text-align: center;
     margin: 1rem 0;
+    font-weight: bold;
 }
 aside div.correlati{
     border:3px solid #E0DDDF;
@@ -136,6 +140,10 @@ aside div.correlati{
 }
 aside div.contenuto-correlati{
     padding:1rem;
+}
+aside div.contenuto-correlati a{
+    color:#02A0CC;
+    text-decoration: underline;
 }
 /* ELEMENTI NELL' ASIDE */
 /* FOOTER */
