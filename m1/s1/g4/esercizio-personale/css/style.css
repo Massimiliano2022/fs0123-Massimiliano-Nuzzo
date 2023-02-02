@@ -90,6 +90,9 @@ main p#crediti{
     padding:1rem 0;
     color:#96A49F;
 }
+main p#crediti i{
+    padding-right: 0.25rem;
+}
 main ul, main ol{
     padding-bottom: 1rem;
     padding-left:2rem;
@@ -164,6 +167,9 @@ aside div.contenuto-correlati{
 aside div.contenuto-correlati a{
     color:#02A0CC;
     text-decoration: underline;
+}
+aside div.contenuto-correlati i{
+    padding-right:0.25rem;
 }
 /* ELEMENTI NELL' ASIDE */
 /* FOOTER */
