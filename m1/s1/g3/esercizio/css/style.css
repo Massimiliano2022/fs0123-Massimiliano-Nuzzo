@@ -52,7 +52,7 @@ main h1{
     font-weight: bold;
 }
 main #img{
-    background: url(/g3/esercizio/img/focaccia.png) no-repeat center center/cover;
+    background: url(../img/focaccia.png) no-repeat center center/cover;
     height: 525px;
     border-radius: 12px;
     margin: auto;

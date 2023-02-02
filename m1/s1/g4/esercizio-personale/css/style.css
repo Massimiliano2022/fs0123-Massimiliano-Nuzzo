@@ -1,0 +1,105 @@
+/* IMPOSTAZIONI GENERALI */
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: url(/s1/g4/esercizio/img/sfondo.png);
+}
+header,main,footer{
+    margin:1rem;
+}
+.colore-viola{
+    color:#932B73;
+    font-weight: bold;
+}
+.colore-azzurro{
+    color:#009FCA;
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+}
+/* HEADER */
+
+header{
+    background: #006E88;
+    padding: 1rem 0;
+}
+header div#logo{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+header p{
+    text-align: center;
+    color:white;
+    padding-bottom:1rem;
+    font-weight: bold;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}
+nav .link a{
+    color:white;
+}
+nav div.link{
+    padding-bottom:0.5rem;
+}
+
+/* MAIN */
+
+main{
+    background: #fff;
+}
+main h1{
+    font-size: 2rem;
+    font-weight:bold;
+}
+main article{
+    padding:2rem 1rem;
+}
+main p{
+    padding-bottom: 1rem;
+}
+main p#crediti{
+    padding:1rem 0;
+    color:#96A49F;
+}
+main ul, main ol{
+    padding-bottom: 1rem;
+    padding-left:2rem;
+}
+main table caption{
+    font-weight: bold;
+}
+main table{
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #3366CC;
+}
+main table th{
+    background: #486AC4;
+    color:#fff;
+    padding:0.5rem 0;
+    border:1px solid #fff;
+}
+main table td{
+    padding:0.75rem 0;
+}
+main article div.tabella{
+    padding-bottom:2rem;
+}
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
