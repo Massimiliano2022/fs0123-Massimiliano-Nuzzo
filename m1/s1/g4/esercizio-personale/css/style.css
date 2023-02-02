@@ -105,6 +105,11 @@ main table th{
 main table td{
     padding:0.75rem 0;
 }
+main table tr:nth-of-type(even):not(.bianca){
+    background-color: #EFEFEF;
+    border-top:2px solid lightgrey;
+    border-bottom:2px solid lightgrey;
+}
 main article div.tabella{
     padding-bottom:2rem;
 }
