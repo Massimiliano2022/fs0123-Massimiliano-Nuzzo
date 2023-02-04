@@ -2,42 +2,6 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
-.center{
-    text-align: center;
-}
-.colore-azzurro{
-    color:#25A6CB;
-}
-.colore-bianco{
-    color:#fff;
-}
-.bg-arancione{
-    background: #f04c2f;
-}
-p{
-    padding:1rem 0;
-}
-.bg-azzurro{
-    background:#25A6CB;
-}
-.strong{
-    font-weight: bold;
-}
-h1,h2,h3{
-    font-weight: bold;
-}
-h1{
-    font-size: 2rem;
-}
-h2{
-    font-size:1.25rem;
-}
-h3{
-    font-size:1rem;
-}
-p{
-    font-size:16px;
-}
 /* UTILITY */
 
 /* HEADER */
@@ -50,86 +14,26 @@ header{
 /* MAIN */
 
 /* section principale */
-main section#principale{
-    background: url(../images/banner.jpg) no-repeat center center/cover;
-    padding:2rem;
-}
-main section#principale div#link-principale{
-    padding:1rem 0;
-    width:40%;
-    margin: auto;
-    border-radius: 6px;
-    margin-top: 1rem;
-}
-main section#principale div#link-principale a{
-    text-decoration: none;
-    font-weight: bold;
-}
+
 /* section principale */
 
 /* section dettaglio */
-section#dettaglio{
-    padding-top:2rem;
-}
-section#dettaglio div.dettagli{
-    padding:1rem 2rem;
-}
-section#dettaglio div.dettagli>div#dettagli-img img{
-    width:100%;
-    border-radius:50%;
-    padding-bottom: 1rem;
-}
-section#dettaglio div#banner{
-    padding:2rem;
-}
-section#dettaglio div#banner h2{
-    font-weight:bold;
-}
-section#dettaglio div#banner p em{
-    font-style: italic;
-}
-section#dettaglio div#banner p#ceo{
-    padding:0.25rem 0;
-}
-section#dettaglio div#banner p#p-no-padding{
-    padding:0;
-    font-size: 0.75rem;
-}
+
 /* section dettaglio */
 /* MAIN */
 
 /* ASIDE */
-aside{
-    padding:2rem;
-}
-aside div.vantaggi{
-    border: 2px solid lightgrey;
-    margin-bottom:2rem;
-}
-aside div.vantaggi div.img-vantaggi img{
-    width: 100%;
-}
-aside div.vantaggi h3{
-    padding-top:1rem;
-}
-/* ASIDE */
 
 /* FOOTER */
-footer{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 0;
-}
-div.horizontal-line{
-    border:2px solid white;
-    width:50%;
-    margin:auto;
-    margin-top: 0.5rem;
-}
-footer a{
-    padding-bottom:0.5rem;
-}
-i{
-    padding-right: 0.5rem;
-}
-/* FOOTER */
+
+/* RESPONSIVE */
+@media only screen and (min-width: 768px) and (max-width: 1920px) {
+/* HEADER */
+
+/* HEADER */
+
+/* MAIN */
+
+/* MAIN */
+} 
+/* RESPONSIVE */
