@@ -2,13 +2,46 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+.center{
+    text-align: center;
+}
+.colore-azzurro{
+    color:#25A6CB;
+}
+.colore-bianco{
+    color:#fff;
+}
+.bg-arancione{
+    background: #f04c2f;
+}
+p{
+    padding:1rem 0;
+}
+.bg-azzurro{
+    background:#25A6CB;
+}
+.strong{
+    font-weight: bold;
+}
+h1,h2,h3{
+    font-weight: bold;
+}
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size:1.25rem;
+}
+h3{
+    font-size:1rem;
+}
+p{
+    font-size:16px;
+}
 /* UTILITY */
 
 /* HEADER */
-header{
-    background:black;
-    padding:2rem 0;
-}
+
 /* HEADER */
 
 /* MAIN */
@@ -29,11 +62,50 @@ header{
 /* RESPONSIVE */
 @media only screen and (min-width: 768px) and (max-width: 1920px) {
 /* HEADER */
-
+header{
+    background:black;
+    padding:2rem 3rem;
+}
 /* HEADER */
 
 /* MAIN */
-
+main section#principale{
+    background: url(../images/banner.jpg) no-repeat center center/cover;
+    /*padding:10rem;*/
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main section#principale div#link-principale{
+    width: 25%;
+    margin: auto;
+}
+/* SECTION DETTAGLIO */
+section#dettaglio-desktop{
+    padding: 0 15rem;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#dettaglio-desktop div#img-dettaglio{
+    flex:1;
+    text-align: center;
+}
+section#dettaglio-desktop div#img-dettaglio img{
+    /*width: 50%;*/
+    border-radius: 50%;
+}
+section#dettaglio-desktop div#dettagli-box{
+    flex:1;
+    text-align: left;
+}
+aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}        
 /* MAIN */
 } 
 /* RESPONSIVE */
