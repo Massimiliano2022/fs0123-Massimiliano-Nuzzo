@@ -94,7 +94,7 @@ section#dettaglio-desktop div#img-dettaglio{
     text-align: center;
 }
 section#dettaglio-desktop div#img-dettaglio img{
-    /*width: 50%;*/
+    width: 50%;
     border-radius: 50%;
 }
 section#dettaglio-desktop div#dettagli-box{
@@ -105,7 +105,14 @@ aside{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 5rem;
+}
+aside div.vantaggi{
+    text-align:center;
 }        
+aside div.vantaggi div.img-vantaggi img{
+    width:50%;
+}
 /* MAIN */
 } 
 /* RESPONSIVE */
