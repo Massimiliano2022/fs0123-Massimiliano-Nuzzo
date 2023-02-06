@@ -120,6 +120,10 @@ footer{
     flex-direction: column;
     padding: 2rem 0;
 }
+footer div#contatti{
+    display: flex;
+    flex-direction: column;
+}
 div.horizontal-line{
     border:2px solid white;
     width:50%;

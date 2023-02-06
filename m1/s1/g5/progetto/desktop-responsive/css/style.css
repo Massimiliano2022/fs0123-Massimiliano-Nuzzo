@@ -1,4 +1,9 @@
 /* UTILITY */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 body{
     font-family: 'Open Sans', sans-serif;
 }
@@ -71,20 +76,23 @@ header{
 /* MAIN */
 main section#principale{
     background: url(../images/banner.jpg) no-repeat center center/cover;
-    /*padding:10rem;*/
-    height: 50vh;
+    padding:10rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+main section#principale p{
+    padding:2rem 0;
+}
 main section#principale div#link-principale{
-    width: 25%;
+    width: 20%;
     margin: auto;
+    padding: 0.75rem 0;
+    border-radius: 6px;
 }
 /* SECTION DETTAGLIO */
 section#dettaglio-desktop{
-    padding: 0 15rem;
-    height: 50vh;
+    padding: 4rem 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,17 +109,23 @@ section#dettaglio-desktop div#dettagli-box{
     flex:1;
     text-align: left;
 }
+main section#banner > div.bg-arancione{
+    padding:4rem 0;
+}
 aside{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 5rem;
+    padding:4rem 4rem;
 }
 aside div.vantaggi{
     text-align:center;
+    border: 5px solid lightgray;
+    margin: 2rem;
+    padding: 0;
 }        
 aside div.vantaggi div.img-vantaggi img{
-    width:50%;
+    width: 100%;
 }
 /* MAIN */
 } 
