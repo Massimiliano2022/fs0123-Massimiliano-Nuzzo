@@ -63,7 +63,17 @@ p{
 /* ASIDE */
 
 /* FOOTER */
-
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer div#contatti{
+    display: flex;
+    flex-direction: column;
+}
+/* FOOTER */
 /* RESPONSIVE */
 @media only screen and (min-width: 768px) and (max-width: 1920px) {
 /* HEADER */
