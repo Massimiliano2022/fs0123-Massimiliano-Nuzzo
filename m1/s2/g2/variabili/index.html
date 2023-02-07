@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabili Js</title>
+</head>
+<body>
+    <h1>Variabili Js</h1>
+    <script>
+        //è possibile inizializzare una variabile e assegnare successivamente un valore
+        var a;
+        //in questo caso la variabile sarà undefined (ovvero il valore non è ancora definito)
+        console.log(a);
+
+        //hoisting
+
+        console.log(b);
+        var b=5;
+        console.log(b);
+
+
+        var nome = 'Mario';
+        var anni = 30;
+        var luogo = 'Roma';
+
+        document.write('Nome: '+nome+', anni: '+anni+', luogo di nascita: '+luogo );
+
+        //backtick --> `` con alt + 9 + 6
+
+        document.write(`<br>Nome: ${nome}, anni: ${anni}, luogo di nascita: ${luogo}`);
+    </script>
+</body>
+</html>
