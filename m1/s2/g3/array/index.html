@@ -42,14 +42,21 @@
         //ATTENZIONE: EVITIAMO I BUCHI
         
         pizze[4] = 'Marinara';//sconsigliato per aggiungere
-        console.log(pizze)
+        console.log(pizze);
+        pizze.sort()
         
         //aggiungere alla fine dell'array senza creare buchi
         pizze.push('Parigina');
-        console.log(pizze)
+        console.log(pizze);
 
         //proprietà length
 
+        console.log( pizze.length );
+        
+        console.log( pizze[pizze.length - 1] );//leggo l'ultimo elemento dell'array
+
+        //è in comune con le stringhe
+        console.log('ciao'.length)//è comunque sbagliato dire che le stringhe sono array di caratteri
 
         /**
          * riordinare
@@ -57,12 +64,12 @@
          * attenzione: sort non è adatto per riordinare i numeri
          * riordina i numeri in senso alfabetico
          * */
-        let studenti = ['Mauro','Vittorio','Rebecca']
-        console.log(studenti)
-        studenti.sort()//riordina in ordine alfabetico
-        console.log(studenti)
-        studenti.reverse()//inverte l'ordine attuale
-        console.log(studenti)
+        let studenti = ['Mauro','Vittorio','Rebecca'];
+        console.log(studenti);
+        studenti.sort();//riordina in ordine alfabetico
+        console.log(studenti);
+        studenti.reverse();//inverte l'ordine attuale
+        console.log(studenti);
         
         /*riordinare i numeri*/
         let numerati = [1,100,20];
@@ -70,16 +77,13 @@
             return a - b;
         })
         console.log(numerati)
+
+
+        //verifica se un dato è un array
+
+        Array.isArray(studenti)// => restituisce un booleano(true se è array)
         
         
-
-
-
-    
-     
-
-
-
     </script>    
 </body>
 </html>
