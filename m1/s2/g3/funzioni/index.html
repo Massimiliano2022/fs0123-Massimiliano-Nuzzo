@@ -77,7 +77,37 @@
          }
 
          funzione1()
-         
+
+
+         /*variabili che contengono funzioni*/
+
+         let fn = function(){
+            return 'ok';
+         }
+
+
+         console.log(fn);//vedo il contenuto della funzione
+         console.log(fn());//eseguo la funzione e così ne ricevo il risultato
+
+         //funzione autoeseguita
+        (function(){
+           console.log('autoeseguita')
+        })()
+
+        //funzioni che restituiscono funzioni
+        function A(x){
+            return function b(y){
+                return function c(z){
+                    return x + y + z;
+                }
+            }
+        }
+
+        console.log( A(2)(3)(7) );
+
+        let h = A(2);
+        let g = h(3);
+        console.log(g(7))
     </script>
 
 </body>
