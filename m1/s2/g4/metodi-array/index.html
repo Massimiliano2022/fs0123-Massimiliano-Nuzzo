@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodi Array</title>
+</head>
+<body>
+    <h1>Metodi Array</h1>
+    <div id="pizze"></div>
+    <div id="menu"></div>
+    <div id="numeri"></div>
+    <script>
+
+        //call-back
+        let pizze = ['Margherita','Diavola','Greca','Mimosa'];
+
+        //for each - serve per ciclare gli array
+        pizze.forEach(function(valore){
+
+            document.getElementById("pizze").innerHTML += "<div>"+valore+"</div>"; 
+
+        });
+
+        //.map()
+
+        let pizzeDiv = pizze.map(function (valore) {
+            return document.getElementById("menu").innerHTML += "<div>"+valore+"</div>"; 
+        });
+
+        console.log(pizze);
+        console.log(pizzeDiv);
+
+        let numeri = [1,2,3,4,5,6];
+
+        let numeriX2 = numeri.map(function(n) {
+            return document.getElementById("numeri").innerHTML += "<div>"+n*2+"</div>"; 
+        });
+
+        /* filter - restituisce un array*/
+        let numeriFiltrati = numeri.filter(function(n) {
+            return n > 3;
+        });
+
+        console.log(numeriFiltrati);
+
+        /* find - restituisce il valore trovato in base alla condizione impostata nel return*/
+
+        let numeriTrovato = numeri.find(function(n) {
+            return n > 3;
+        });
+
+        console.log(numeriTrovato);
+
+    </script>
+</body>
+</html>
