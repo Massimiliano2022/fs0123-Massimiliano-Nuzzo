@@ -70,10 +70,11 @@
 
         let campiVisualizzati = ['gusto','prezzo']
 
-        for(let prop in margherita){
+        for(let proprieta in margherita){
 
-            if(campiVisualizzati.includes(prop)){
-                document.write(`<div>${prop} : ${margherita[prop]}</div>`)
+            if(campiVisualizzati.includes(proprieta)){
+                //document.write(`<div>${prop} : ${margherita[prop]}</div>`)
+                document.getElementById("margherita").innerHTML+="<p>"+proprieta+": "+margherita[proprieta]+"</p>";
             }
             //margherita[prop] è il valore
             //prop è la chiave
