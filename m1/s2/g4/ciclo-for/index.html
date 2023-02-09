@@ -22,33 +22,44 @@
     <h1>Ciclo For</h1>
     <div id="numeri"></div>
     <div id="pizze"></div>
+    <div id="menu"></div>
     <div id="testo"></div>
+    <div id="margherita"></div>
     <script>
         
-        /*for(let i=0;i<=10;i++){
+        for(let i=0;i<=10;i++){
             document.getElementById("numeri").innerHTML+="<div>"+i+"</div>";
-        }*/
+        }
         
         //iterazione sugli array - anche se non è consigliabile ci sono il for of e il for each
 
-        /*let pizze = ['Margherita','Diavola','Greca','Mimosa'];
+        let pizze = ['Margherita','Diavola','Greca','Mimosa'];
         for(i=0;i<pizze.length;i++){
             document.getElementById("pizze").innerHTML+="<div>"+pizze[i]+"</div>";
-        }*/
+        }
 
         //for of - adatto per iterazione array
 
-        let pizze = ['Margherita','Diavola','Greca','Mimosa'];
+        let menu = ['Margherita','Diavola','Greca','Mimosa'];
 
-        for(let pizza of pizze){
-            document.getElementById("pizze").innerHTML+="<div>"+pizza+"</div>";
+        for(let pizza of menu){
+            document.getElementById("menu").innerHTML+="<div>"+pizza+"</div>";
         }
 
         for(let lettera of 'Testo'){
             document.getElementById("testo").innerHTML+="<p>"+lettera+" -"+"</p>";
         }
 
+        //for in - adatto per gli oggetti
 
+        let margherita = {
+            gusto : 'Margherita',
+            prezzo : 5
+        }
+
+        for(let proprieta in margherita){
+            document.getElementById("margherita").innerHTML+="<p>"+proprieta+" -"+margherita[proprieta]+"</p>";
+        }
 
     </script>
 </body>
