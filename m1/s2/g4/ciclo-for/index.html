@@ -52,13 +52,31 @@
 
         //for in - adatto per gli oggetti
 
-        let margherita = {
+        /*let margherita = {
             gusto : 'Margherita',
             prezzo : 5
         }
 
         for(let proprieta in margherita){
             document.getElementById("margherita").innerHTML+="<p>"+proprieta+" -"+margherita[proprieta]+"</p>";
+        }*/
+
+        let margherita = {
+            gusto : 'Margherita',
+            prezzo : 5,
+            costo: 2,
+            metodo : function(){}
+        }
+
+        let campiVisualizzati = ['gusto','prezzo']
+
+        for(let prop in margherita){
+
+            if(campiVisualizzati.includes(prop)){
+                document.write(`<div>${prop} : ${margherita[prop]}</div>`)
+            }
+            //margherita[prop] è il valore
+            //prop è la chiave
         }
 
     </script>
