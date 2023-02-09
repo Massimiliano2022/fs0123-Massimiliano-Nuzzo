@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metodi Array</title>
 </head>
+
 <body>
     <h1>Metodi Array</h1>
     <div id="pizze"></div>
@@ -14,45 +16,113 @@
     <script>
 
         //call-back
-        let pizze = ['Margherita','Diavola','Greca','Mimosa'];
+        let pizze = ['Margherita', 'Diavola', 'Greca', 'Mimosa'];
 
         //for each - serve per ciclare gli array
-        pizze.forEach(function(valore){
+        pizze.forEach(function (valore) {
 
-            document.getElementById("pizze").innerHTML += "<div>"+valore+"</div>"; 
+            document.getElementById("pizze").innerHTML += "<div>" + valore + "</div>";
 
         });
 
         //.map()
 
         let pizzeDiv = pizze.map(function (valore) {
-            return document.getElementById("menu").innerHTML += "<div>"+valore+"</div>"; 
+            return document.getElementById("menu").innerHTML += "<div>" + valore + "</div>";
         });
 
         console.log(pizze);
         console.log(pizzeDiv);
 
-        let numeri = [1,2,3,4,5,6];
+        let numeri = [1, 2, 3, 4, 5, 6];
 
-        let numeriX2 = numeri.map(function(n) {
-            return document.getElementById("numeri").innerHTML += "<div>"+n*2+"</div>"; 
+        let numeriX2 = numeri.map(function (n) {
+            return document.getElementById("numeri").innerHTML += "<div>" + n * 2 + "</div>";
         });
 
         /* filter - restituisce un array*/
-        let numeriFiltrati = numeri.filter(function(n) {
+        let numeriFiltrati = numeri.filter(function (n) {
             return n > 3;
         });
 
         console.log(numeriFiltrati);
 
-        /* find - restituisce il valore trovato in base alla condizione impostata nel return*/
+        /* find - restituisce il primo valore trovato in base alla condizione impostata nel return*/
 
-        let numeriTrovato = numeri.find(function(n) {
+        let numeriTrovato = numeri.find(function (n) {
             return n > 3;
         });
 
         console.log(numeriTrovato);
 
+        /*reduce - permette di fare operazioni di confronto tra elementi array precedente e corrente*/
+        numeri = [1, 2, 3, 4, 5, 6];
+        let somma = numeri.reduce(function (previous, current) {
+            return previous + current;
+        });
+        console.log(somma);
+
+        numeri = [1, 20, 300, 4, 5, 6];
+        let numeroGrande = numeri.reduce(function (p, c) {
+            if (p > c) {
+                return p;
+            } else {
+                return c;
+            }
+        })
+        console.log(numeroGrande);
+
+        /* eliminare da un array */
+
+        pizze = ['Margherita', 'Diavola', 'Greca', 'Mimosa'];
+        // andando per esclusione
+        pizze = pizze.filter(function (pizza) {
+            return pizza != 'Mimosa';
+        });
+
+        console.log(pizze);
+
+        //eliminazione diretta
+        pizze = ['Margherita', 'Diavola', 'Greca', 'Mimosa'];
+
+        let indice = pizze.indexOf('Diavola'); //trova la Diavola e dimmi la sua poszione
+
+        pizze.splice(indice, 1);// accetta due elementi l'indice e poi il numero di elementi che voglio eliminare dopo l'indice indicato  
+
+        console.log(pizze);
+
+        //eliminazione da array di oggetti
+
+        pizze = [
+            {
+                gusto: 'Margherita',
+                prezzo: 5,
+                costo: 2,
+                disponibile: true
+            },
+            {
+                gusto: 'Diavola',
+                prezzo: 1,
+                costo: 0.5,
+                disponibile: true
+            },
+            {
+                gusto: 'Hawaiana',
+                prezzo: 500,
+                costo: 2,
+                disponibile: false
+            },
+        ];
+
+        let index = pizze.findIndex(function(p) {
+            return !p.disponibile; 
+        });
+
+        console.log(index);
+        pizze.splice(index,1);
+        console.log(pizze);
+
     </script>
 </body>
+
 </html>
