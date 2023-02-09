@@ -11,7 +11,7 @@
 <body>
     <style>
         div#numeri {
-            height: 10vh;
+            height: 100vh;
             background: red;
             color:#fff;
             font-weight: bold;
@@ -23,7 +23,7 @@
         let i = 1;
         function stampaNumeri(i) {
             while (i <= 10) {
-                document.getElementById("numeri").innerHTML = "<b>" + i + "</b>";
+                document.getElementById("numeri").innerHTML += "<div>" + i + "</div>";
                 i++;
             }
         }
