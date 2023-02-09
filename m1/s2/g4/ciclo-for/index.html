@@ -22,6 +22,7 @@
     <h1>Ciclo For</h1>
     <div id="numeri"></div>
     <div id="pizze"></div>
+    <div id="testo"></div>
     <script>
         
         /*for(let i=0;i<=10;i++){
@@ -30,10 +31,23 @@
         
         //iterazione sugli array - anche se non è consigliabile ci sono il for of e il for each
 
-        let pizze = ['Margherita','Diavola','Greca','Mimosa'];
+        /*let pizze = ['Margherita','Diavola','Greca','Mimosa'];
         for(i=0;i<pizze.length;i++){
             document.getElementById("pizze").innerHTML+="<div>"+pizze[i]+"</div>";
+        }*/
+
+        //for of - adatto per iterazione array
+
+        let pizze = ['Margherita','Diavola','Greca','Mimosa'];
+
+        for(let pizza of pizze){
+            document.getElementById("pizze").innerHTML+="<div>"+pizza+"</div>";
         }
+
+        for(let lettera of 'Testo'){
+            document.getElementById("testo").innerHTML+="<p>"+lettera+" -"+"</p>";
+        }
+
 
 
     </script>
