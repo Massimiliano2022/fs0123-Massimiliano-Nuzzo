@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>While</title>
 </head>
+
 <body>
+    <style>
+        div#numeri {
+            height: 10vh;
+            background: red;
+            color:#fff;
+            font-weight: bold;
+        }
+    </style>
     <h1>While</h1>
+    <div id="numeri" onclick="stampaNumeri(i)"></div>
     <script>
-        
+        let i = 1;
+        function stampaNumeri(i) {
+            while (i <= 10) {
+                document.getElementById("numeri").innerHTML = "<b>" + i + "</b>";
+                i++;
+            }
+        }
+        //document.getElementById("numeri").innerHTML ="Il ciclo ha terminato le operazioni";
     </script>
 </body>
+
 </html>
