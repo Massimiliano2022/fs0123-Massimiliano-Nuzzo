@@ -1,4 +1,7 @@
-let a,b;
+/*let a,b;*/
+let a='';
+let b='';
+let operatore='';
 let risultato;
 
 const calcolatrice = {
@@ -24,28 +27,51 @@ function aggiungiSimbolo(elemento) {
     let display = document.querySelector("#display");
     display.value = eval(display.value);
 }*/
+
 function totale() {
     let display = document.querySelector("#display");
     console.log(display.value);
-    let numeri = display.value.split(/[!\s+-/*X]+/);
-    a = Number(numeri[0]);
-    b = Number(numeri[1]);
 
-    let operazione = String(display.value);
-    if(operazione.includes('+')){
+    let espressione=String(display.value);
+    for(i=0;i<espressione.length;i++){
+        if((espressione[i]=='+')||(espressione[i]=='-')||(espressione[i]=='X')||(espressione[i]=='/')){
+            operatore=espressione[i];
+            break;
+        }else{
+            a += espressione[i];
+        }
+    }
+    b = espressione.substring(a.length + 1);
+
+    /*console.log(a);
+    console.log(operatore);
+    console.log(b);*/
+
+    
+    if(operatore =='+'){
         risultato=calcolatrice.somma(a,b);
-    }else if(operazione.includes('-')){
+    }else if(operatore=='-'){
         risultato=calcolatrice.sottrazione(a,b);
-    }else if(operazione.includes('X')){
+    }else if(operatore=='X'){
         risultato=calcolatrice.moltiplicazione(a,b);
-    }else if(operazione.includes('/')){
+    }else if(operatore=='/'){
         risultato=calcolatrice.divisione(a,b);
     }
     display.value =risultato;
 };
+
 function reset() {
     let display = document.querySelector("#display");
     display.value = '';
-    console.log(display);
+    a='';
+    b='';
+    operatore='';
+    espressione='';
+    
+    /*console.log(display);
+    console.log(a);
+    console.log(b);
+    console.log(operatore);
+    console.log(espressione);*/
 };
 
