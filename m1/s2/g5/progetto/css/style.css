@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+input,button{
+    color:#436A96;
+    font-weight: bold;
+    font-size: 1rem;
+}
+input{
+    border:3px solid #436A96;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#display{
+    width: 100%;
+    height: 10vh;
+}
+#tastiera{
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+button.btn{
+    padding: 2rem;
+    width: calc(100% / 4 - 0.9rem);
+    margin: 5px;
+}
+button#totale {
+    width:calc(100% / 1 - 1rem);
+    margin: 5px;
+}

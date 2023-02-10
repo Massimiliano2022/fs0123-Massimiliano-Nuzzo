@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calcolatrice</title>
+</head>
+<body>
+    <main>
+        <div id="calcolatrice">
+            <div>
+                <input id="display"></input>
+            </div>
+            <div id="tastiera">
+                <div class="riga">
+                    <button class="btn" data-simbolo="7" onclick="aggiungiSimbolo(this)">7</button>
+                    <button class="btn" data-simbolo="8" onclick="aggiungiSimbolo(this)">8</button>
+                    <button class="btn" data-simbolo="9" onclick="aggiungiSimbolo(this)">9</button>
+                    <button class="btn" data-simbolo="/" onclick="aggiungiSimbolo(this)">/</button>
+                </div>
+                <div class="riga">
+                    <button class="btn" data-simbolo="4" onclick="aggiungiSimbolo(this)">4</button>
+                    <button class="btn" data-simbolo="5" onclick="aggiungiSimbolo(this)">5</button>
+                    <button class="btn" data-simbolo="6" onclick="aggiungiSimbolo(this)">6</button>
+                    <button class="btn" data-simbolo="*" onclick="aggiungiSimbolo(this)">X</button>
+                </div>
+                <div class="riga">
+                    <button class="btn" data-simbolo="1" onclick="aggiungiSimbolo(this)">1</button>
+                    <button class="btn" data-simbolo="2" onclick="aggiungiSimbolo(this)">2</button>
+                    <button class="btn" data-simbolo="3" onclick="aggiungiSimbolo(this)">3</button>
+                    <button class="btn" data-simbolo="-" onclick="aggiungiSimbolo(this)">-</button>
+                </div>
+                <div class="riga">
+                    <button class="btn" onclick="reset()">C</button>
+                    <button class="btn" data-simbolo="0" onclick="aggiungiSimbolo(this)">0</button>
+                    <button class="btn" data-simbolo="." onclick="aggiungiSimbolo(this)">.</button>
+                    <button class="btn" data-simbolo="+" onclick="aggiungiSimbolo(this)">+</button>
+                </div>
+            </div>
+            <div id="uguale">
+                <button class="btn" id="totale" data-simbolo="=" onclick="totale()">=</button>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
