@@ -1,27 +1,42 @@
-/*let a,b;*/
-let a='';
-let b='';
-let operatore='';
+let a = '';
+let b = '';
+let operatore = '';
 let risultato;
 
 const calcolatrice = {
-    somma: function(a,b) {
+    somma: function (a, b) {
         return a + b;
     },
-    sottrazione: function(a,b) {
+    sottrazione: function (a, b) {
         return a - b;
     },
-    divisione:function(a,b) {
+    divisione: function (a, b) {
         return a / b;
     },
-    moltiplicazione:function(a,b) {
+    moltiplicazione: function (a, b) {
         return a * b;
+    },
+    potenza: function (a, b) {
+        return Math.pow(a, b);
+    },
+    quadrato: function (a) {
+        return Math.sqrt(a);
+    },
+    pigreco: function(){
+        return Math.PI;
     }
 };
 function aggiungiSimbolo(elemento) {
     let simbolo = elemento.getAttribute('data-simbolo');
     let display = document.querySelector('#display');
-    display.value += simbolo;
+    
+    /* π deve necessariamente essere il primo bottone premuto per come ho impostato il codice
+    dopo posso effettuare le varie operazioni*/ 
+    if(simbolo.includes('π')){
+        display.value=calcolatrice.pigreco();
+    }else{
+        display.value += simbolo;
+    }    
 };
 /*function totale() {
     let display = document.querySelector("#display");
@@ -30,48 +45,55 @@ function aggiungiSimbolo(elemento) {
 
 function totale() {
     let display = document.querySelector("#display");
-    console.log(display.value);
+    let espressione = String(display.value);
 
-    let espressione=String(display.value);
-    for(i=0;i<espressione.length;i++){
-        if((espressione[i]=='+')||(espressione[i]=='-')||(espressione[i]=='X')||(espressione[i]=='/')){
-            operatore=espressione[i];
-            break;
-        }else{
-            a += espressione[i];
+    /* √ deve necessariamente essere il primo bottone premuto per come ho impostato il codice
+    poi digito il numero e premendo uguale ottengo la radice*/    
+    if (espressione.includes('√')) {
+        for (i = 0; i < espressione.length; i++) {
+            if (espressione[i] != '√') {
+                a = espressione[i];
+                console.log(a);
+            } else {
+                operatore += espressione[i-a.length];
+                console.log(operatore);
+            }
         }
-    }
-    b = espressione.substring(a.length + 1);
+    } else {
 
-    /*console.log(a);
-    console.log(operatore);
-    console.log(b);*/
-
-    
-    if(operatore =='+'){
-        risultato=calcolatrice.somma(a,b);
-    }else if(operatore=='-'){
-        risultato=calcolatrice.sottrazione(a,b);
-    }else if(operatore=='X'){
-        risultato=calcolatrice.moltiplicazione(a,b);
-    }else if(operatore=='/'){
-        risultato=calcolatrice.divisione(a,b);
+        for (i = 0; i < espressione.length; i++) {
+            if ((espressione[i] == '+') || (espressione[i] == '-') || (espressione[i] == 'X') || (espressione[i] == '/') || (espressione[i] == '^')) {
+                operatore = espressione[i];
+                break;
+            } else {
+                a += espressione[i];
+            }
+        }
+        b = espressione.substring(a.length + 1);
     }
-    display.value =risultato;
+
+    if (operatore == '+') {
+        risultato = calcolatrice.somma(a, b);
+    } else if (operatore == '-') {
+        risultato = calcolatrice.sottrazione(a, b);
+    } else if (operatore == 'X') {
+        risultato = calcolatrice.moltiplicazione(a, b);
+    } else if (operatore == '/') {
+        risultato = calcolatrice.divisione(a, b);
+    } else if (operatore == '^') {
+        risultato = calcolatrice.potenza(a, b);
+    } else if (operatore == '√') {
+        risultato = calcolatrice.quadrato(a);
+    }
+    display.value = risultato;
 };
 
 function reset() {
     let display = document.querySelector("#display");
     display.value = '';
-    a='';
-    b='';
-    operatore='';
-    espressione='';
-    
-    /*console.log(display);
-    console.log(a);
-    console.log(b);
-    console.log(operatore);
-    console.log(espressione);*/
+    a = '';
+    b = '';
+    operatore = '';
+    espressione = '';
 };
 
