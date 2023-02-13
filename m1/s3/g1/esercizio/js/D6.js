@@ -151,30 +151,36 @@ console.log(upperFirst('benvenuto su epicode'));
  della stringa originale.
 */
 
-function cutString(stringa){
-
-    let result=[];
-    result=stringa.split(' ');
-    
-    let nuovaStrCut = new String();
-
-    for (let i = 0; i < result.length; i++) {
-        if(i==0){
-            result[i] = result[i].slice(1);
-            nuovaStrCut+=result[i]+' ';
-        }else{
-            nuovaStrCut+=result[i]=result[i].slice(0, result[i].length - 1);
-        }
-      }    
-      return nuovaStrCut;
-
-
-}
+function cutString(stringa) {
+    let words = stringa.split(' ');
+    let newStr=new String();
+    for (let i = 0; i < words.length; i++) {
+      if (i === 0) {
+        words[i] = words[i].slice(1);
+      } else {
+        words[i] = words[i].slice(0, -1);
+      }
+      newStr+=words[i]+' ';
+    }
+    return newStr;
+  }
 console.log(cutString('benvenuto epicode'));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
+function giveMeRandom(n) {
+    let i=0;
+    let number;
+    let numArray =[];
 
+    while(i<n){
+        number=Math.floor(Math.random() * 10);
+        numArray.push(number); 
+        i++;
+    }
+    return numArray;
+}
+console.log(giveMeRandom(5));
 /* SCRIVI QUI LA TUA RISPOSTA */
