@@ -131,31 +131,17 @@ console.log(reverseString("ciao"));
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/*function upperCase(stringa) {
-    let result=[];
-    let primoCarattere;
-    result=stringa.split(' ');
-    for(let c of result){
-        primoCarattere=c.charAt(0).toUpperCase();
-        console.log(primoCarattere);
-        primoCarattere=primoCarattere[0].replace(c);
-    }
-}*/
 function upperFirst(stringa) {
-    let strArr=[];
-    let c;
-    strArr=stringa.split(' ');
-    for(let parola of strArr){
-        //console.log(parola.toUpperCase());
-        for(i=0;i<parola.length;i++){
-            if(i==0){
-               c = parola[i].toUpperCase();
-               parola=parola[0].replace(c);
-               console.log(parola);
-            }
-            console.log(parola);
-        }
-    }
+    let result=[];
+    result=stringa.split(' ');
+    
+    let nuovaStrMaiusc= new String();
+
+    for (let i = 0; i < result.length; i++) {
+        result[i] = result[i].charAt(0).toUpperCase() + result[i].slice(1);
+        nuovaStrMaiusc+=result[i]+' ';
+      }    
+      return nuovaStrMaiusc;
 }
 console.log(upperFirst('benvenuto su epicode'));
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -165,6 +151,26 @@ console.log(upperFirst('benvenuto su epicode'));
  della stringa originale.
 */
 
+function cutString(stringa){
+
+    let result=[];
+    result=stringa.split(' ');
+    
+    let nuovaStrCut = new String();
+
+    for (let i = 0; i < result.length; i++) {
+        if(i==0){
+            result[i] = result[i].slice(1);
+            nuovaStrCut+=result[i]+' ';
+        }else{
+            nuovaStrCut+=result[i]=result[i].slice(0, result[i].length - 1);
+        }
+      }    
+      return nuovaStrCut;
+
+
+}
+console.log(cutString('benvenuto epicode'));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
