@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    <h1>Date</h1>
+    <script>
+        
+        let adesso =  new Date();//scriverò nella variabile un oggetto Date le info inerenti a data e ora attuali
+        console.log(adesso);
+
+        //metodi per la lettura (get)
+
+        let year = adesso.getFullYear();
+        let month = adesso.getMonth();// da 0 a 11
+        let weekDay = adesso.getDay(); //il numero del giorno della settimana. numeri da 0 a 6, settimana parte da domenica.
+        let day = adesso.getDate();
+        console.log(year,month,weekDay,day);
+
+        adesso.setDate(20); // il 20 del mese
+        adesso.setMonth(-1);
+        //qualora si superasse il numero 11, anche l'anno viene spostato
+        //il mese 12 è gennaio dell'anno prossimo
+        //lo stesso funzionamento avviene in negativo
+        //il mese -1 è dicembre dell'anno precedente
+
+        console.log(adesso);
+
+        console.log(adesso.toLocaleDateString());
+
+    </script>
+</body>
+</html>
