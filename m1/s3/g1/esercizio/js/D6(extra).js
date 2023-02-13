@@ -6,6 +6,20 @@
  La funzione deve inoltre ritornare la somma di tutti i valori maggiori di 5.
 */
 
+function checkArray(numeri) {
+    let nArray= [];
+    let totale=0;
+    for(let n of numeri){
+        if(n>5){
+            nArray.push(n);
+            console.log(n);
+            totale+=n;
+        }
+    }
+    return totale;
+}
+console.log(checkArray(giveMeRandom(6)));
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 2
