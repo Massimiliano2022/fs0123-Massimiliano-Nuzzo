@@ -7,13 +7,13 @@
 */
 
 function checkArray(numeri) {
-    let nArray= [];
-    let totale=0;
-    for(let n of numeri){
-        if(n>5){
+    let nArray = [];
+    let totale = 0;
+    for (let n of numeri) {
+        if (n > 5) {
             nArray.push(n);
             console.log(n);
-            totale+=n;
+            totale += n;
         }
     }
     return totale;
@@ -27,12 +27,49 @@ console.log(checkArray(giveMeRandom(6)));
  Crea una funzione chiamata "shoppingCartTotal" che calcola il totale dovuto al negozio (tenendo conto delle quantità di ogni oggetto).
 */
 
+let oggetto;
+let totaleDovuto;
+let shoppingCart = [
+    { prezzo: 20, nome: 'maglietta', id: 1, quantity: 10 },
+    { prezzo: 50, nome: 'jeans', id: 2, quantity: 15 },
+    { prezzo: 80, nome: 'scarpe', id: 3, quantity: 20 }
+];
+
+function shoppingCartTotal(_nome, _quantity) {
+    oggetto = shoppingCart.find(function (item) {
+        return item.nome === _nome;
+    });
+    totaleDovuto = oggetto.prezzo * _quantity;
+    return totaleDovuto;
+}
+
+console.log(shoppingCartTotal('jeans', 3));
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 3
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "addToShoppingCart" che riceve un nuovo oggetto dello stesso tipo, lo aggiunge a "shoppingCart" e ritorna il nuovo numero totale degli elementi.
 */
+
+let oggettoDaAggiungere;
+let totaleProvvisorio;
+let totale;
+function addToShoppingCart(_nome, _quantity) {
+
+    oggettoDaAggiungere = shoppingCart.find(function (item) {
+        return item.nome === _nome;
+    });
+
+    totaleProvvisorio = shoppingCartTotal('jeans', 3);
+    totale = oggettoDaAggiungere.prezzo * _quantity;
+
+    totale = totale + totaleProvvisorio;
+
+    return totale;
+}
+
+console.log(addToShoppingCart('maglietta', 5));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -41,6 +78,20 @@ console.log(checkArray(giveMeRandom(6)));
  Crea una funzione chiamata "maxShoppingCart" che riceve l'array "shoppingCart" e ritorna l'oggetto più costoso in esso contenuto.
 */
 
+let oggettoCostoso;
+
+function maxShoppingCart(shoppingCart) {
+
+    oggettoCostoso = shoppingCart.reduce(function (prev, current) {
+        //utilizzo l'operatore ternario per confrontare il prezzo precedente rispetto a quello corrente fin quando non trova quello più alto
+        return (prev.prezzo > current.prezzo) ? prev : current
+    });
+
+    return oggettoCostoso;
+}
+
+console.log(maxShoppingCart(shoppingCart));
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 5
@@ -48,12 +99,40 @@ console.log(checkArray(giveMeRandom(6)));
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array "shoppingCart" e ritorna l'ultimo elemento.
 */
 
+shoppingCart.push({ prezzo: 100, nome: 'felpa', id: 4, quantity: 100 })
+
+function latestShoppingCart(arr) {
+    return arr.pop();
+}
+
+let ultimoOggetto = latestShoppingCart(shoppingCart);
+console.log(ultimoOggetto);
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
  La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
 */
+
+function loopUntil(x) {
+    let count = 0;
+    while (true) {
+        let randomNumber = Math.floor(Math.random() * 10);
+        console.log(randomNumber);
+        if (randomNumber > x) {
+            count++;
+        } else {
+            count = 0;
+        }
+        if (count == 3) {
+            break;
+        }
+    }
+}
+
+
+console.log(loopUntil(4));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
