@@ -356,14 +356,53 @@ console.log(creaArrayTitolo(movies));
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 
+function filmMillennioCorrente(movies){
+let filmMillennio = [];
+  for(i=1;i<movies.length;i++){
+    if(movies[i].Year>2000){
+      filmMillennio.push(movies[i]);
+    }
+  }
+  return filmMillennio;
+
+}
+console.log(filmMillennioCorrente(movies));
+
 /* ESERCIZIO 16
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
-
+function findMovieById(id) {
+  for(i=1;i<movies.length;i++){
+    if(movies[i].imdbID==id){
+      return movies[i];
+    }
+  }
+}
+console.log(findMovieById('tt0057261'));
 /* ESERCIZIO 17
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
-
+function sommaAnni(movies) {
+  let totale = 0;
+  let annoN = 0;
+  for (let i = 0; i < movies.length; i++) {
+    annoN = parseInt(movies[i].Year);
+    totale += annoN;
+  }
+  return totale;
+}
+console.log(sommaAnni(movies));
 /* ESERCIZIO 18 (EXTRA)
   Scrivi una funzione per recuperare tutti i film dall'array fornito che contengono una parola fornita.
 */
+function findByWord(movies,word) {
+let arrayWord=[];
+  for(i=0;i<movies.length;i++){
+
+    if(movies[i].Title.includes(word)){
+      arrayWord.push(movies[i]);
+    }
+  }
+  return arrayWord;
+}
+console.log(findByWord(movies,'The'));
