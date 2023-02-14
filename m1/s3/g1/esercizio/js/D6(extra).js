@@ -129,6 +129,7 @@ function loopUntil(x) {
             break;
         }
     }
+    return count;
 }
 
 
@@ -140,11 +141,38 @@ console.log(loopUntil(4));
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
 
+function average(arr) {
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'number' && !isNaN(arr[i])) {
+            sum += arr[i];
+            count++;
+        }
+    }
+    return count > 0 ? sum / count : 0;
+}
+
+console.log(average([1, 2, 3, 4, 'ciao', 5]));
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
+
+
+function longest(arr) {
+    let longestWord = arr[0];
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i].length > longestWord.length) {
+            longestWord = arr[i];
+        }
+    }
+    return longestWord;
+}
+
+console.log(longest(['ciao', 'epicode', 'biblioteca', 'benvenuto']));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -153,11 +181,39 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
  La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
 */
 
+function antiSpam(emailContent) {
+
+    let isSpam = false;
+
+    if (emailContent.indexOf("SPAM") !== -1 || emailContent.indexOf("SCAM") !== -1) {
+        isSpam = true;
+    }
+
+    return isSpam;
+}
+
+console.log(antiSpam('Hai vinto un iphone SCAM SPAM'));
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
+
+let data = new Date();
+data.setDate(data.getDate() - 30);
+function calcolaGiorni(data) {
+
+    let dataOggi = new Date();
+
+    differenzaInMillisecondi = dataOggi.getTime() - data.getTime();
+    differenzaInGiorni = Math.floor(differenzaInMillisecondi / (24 * 60 * 60 * 1000));
+
+    return differenzaInGiorni;
+
+}
+
+console.log(calcolaGiorni(data));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -168,5 +224,32 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
  ["00","01","02"
  "10","11","12"]
 */
+
+function matrixGenerator(x, y) {
+
+    let matrix = [];
+    let indiceStr = new String();
+    
+    for (let i = 0; i < x; i++) {
+
+        let row = [];
+
+        for (let j = 0; j < y; j++) {
+
+            indiceStr = i+''+j;
+
+            console.log(indiceStr);
+
+            row.push(indiceStr);
+        }
+
+        matrix.push(row);
+    }
+
+    return matrix;
+
+
+}
+console.log(matrixGenerator(3, 2));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
