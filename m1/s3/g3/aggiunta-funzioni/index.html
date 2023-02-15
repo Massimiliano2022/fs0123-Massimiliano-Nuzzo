@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aggiunta funzioni</title>
+</head>
+<body>
+    <script>
+        {
+
+            /*
+        Creazione di oggetti manualmente
+        */
+
+        let margherita = {
+            gusto : 'Margherita',
+            prezzo : 5,
+            disponibile : true,
+            mostraPrezzo: function() {
+                console.log(this); //tutto l'oggetto margherita
+                console.log(`Il prezzo della pizza margherita è di ${this.prezzo}€`);//backstick con alt + 9 + 6
+            }
+        }
+
+        let diavola = {
+            gusto : 'Diavola',
+            prezzo : 1,
+            disponibile : true,
+            mostraPrezzo: () => {
+                console.log('Il prezzo della pizza diavola è di 1€');
+            }
+        }
+        
+        let pizze = [margherita, diavola];
+
+            pizze.forEach( p =>{
+
+                p.mostraPrezzo = function(){
+                    console.log(this)//tutto l'oggetto margherita
+                    console.log(`Il prezzo della pizza ${this.gusto} è di ${this.prezzo}€`);
+                }
+
+            })
+
+            console.table(pizze)
+
+            margherita.mostraPrezzo();
+            diavola.mostraPrezzo();
+
+
+        }
+        
+    </script>
+</body>
+</html>

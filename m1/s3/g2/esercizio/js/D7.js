@@ -318,7 +318,7 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 function trovaFilmPiuVecchio(movies){
-  let olderFilm = movies[1];
+  let olderFilm = movies[0];
 
   for(i=1;i<movies.length;i++){
     if(movies[i].Year<olderFilm.Year){
@@ -358,7 +358,7 @@ console.log(creaArrayTitolo(movies));
 
 function filmMillennioCorrente(movies){
 let filmMillennio = [];
-  for(i=1;i<movies.length;i++){
+  for(i=0;i<movies.length;i++){
     if(movies[i].Year>2000){
       filmMillennio.push(movies[i]);
     }
@@ -372,7 +372,7 @@ console.log(filmMillennioCorrente(movies));
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 function findMovieById(id) {
-  for(i=1;i<movies.length;i++){
+  for(i=0;i<movies.length;i++){
     if(movies[i].imdbID==id){
       return movies[i];
     }
