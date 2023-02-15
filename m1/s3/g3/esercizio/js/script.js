@@ -59,8 +59,13 @@ function rimuoviTask(div) {
 function completaTask(divButton) {
     for (let task of arrTask) {
         if (divButton.textContent.includes(task.nome)) {
-            task.isCompleta = true;
-            divButton.querySelector('p').style.textDecoration = 'line-through';
+            if(!task.isCompleta){
+                task.isCompleta = true;
+                divButton.querySelector('p').style.textDecoration = 'line-through';
+            }else{
+                task.isCompleta=false;
+                divButton.querySelector('p').style.textDecoration = 'none';
+            }
         }
     }
 }
