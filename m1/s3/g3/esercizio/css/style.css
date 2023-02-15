@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+main{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    flex-direction: column;
+}
+main h1{
+    margin:2rem;
+}
+input{
+    width: 100%;
+    padding: 1rem;
+}
+button#aggiungi{
+    width: 100%;
+    padding: 1rem;
+    background: #0B5ED7;
+    color:#fff;
+    border-radius:6px;
+    border:0;
+    font-weight:bold;
+}
+div.task-item{
+    padding: 2rem;
+    border: 3px solid #0B5ED7;
+}
+div.task-list div.task-item p{
+    display: inline-block;
+}
+div.task-list div.task-item div.button{
+    display: flex;
+    justify-content: flex-end;
+}
