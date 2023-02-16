@@ -139,7 +139,7 @@
             let newParagraph = document.createElement('p');
             let textNode = document.createTextNode(content);
             newParagraph.appendChild(textNode);
-            ps[j].parentNode.insertBefore(newParagraph, ps[j].nextSibling); 
+            ps[j].parentNode.insertBefore(newParagraph, ps[j].nextSibling);
             break;
           }
 
@@ -185,26 +185,54 @@
 
     const makeItClickable = function () {
 
-        let arrColor=['blue','red','yellow','green','grey','violet'];
-        
-        let h1Element = document.querySelector("h1");
+      let arrColor = ['blue', 'red', 'yellow', 'green', 'grey', 'violet'];
 
-        h1Element.addEventListener("click", function () {
-          let randomColor = Math.floor(Math.random() * 6);
-          arrColor[randomColor];
-          h1Element.style.color = arrColor[randomColor];
-        });
-      };
+      let h1Element = document.querySelector("h1");
 
-      makeItClickable();
+      h1Element.addEventListener("click", function () {
+        let randomColor = Math.floor(Math.random() * 6);
+        arrColor[randomColor];
+        h1Element.style.color = arrColor[randomColor];
+      });
+    };
+
+    makeItClickable();
 
     /* ESERCIZIO 10
      Cambia il testo del footer con qualcos'altro quando l'utente ci clicca sopra.
     */
 
     const changeFooterText = function () {
-      //
+
+      let originalFooterContent = footer.innerHTML;
+
+      let arrImg = ['1.gif', '2.gif', '3.gif', '4.gif', '5.gif', '6.gif'];
+
+      event.preventDefault();
+      const clickedElement = event.target;
+
+      let random = Math.floor(Math.random() * arrImg.length);
+
+      let newImg = document.createElement("img");
+
+      newImg.setAttribute("src", "img/" + arrImg[random]);
+      newImg.setAttribute("alt", "Meme");
+      newImg.setAttribute("width", "300");
+      newImg.setAttribute("height", "200");
+
+      footer.innerHTML = "";
+      footer.appendChild(newImg);
+
+      setTimeout(function () {
+        footer.innerHTML = originalFooterContent;
+      }, 3000);
+
     }
+
+    let footer = document.querySelector(".footer");
+    footer.addEventListener("click", function () {
+      changeFooterText();
+    });
 
     /* ESERCIZIO 11
      Aggiungi un event listener al campo di testo nella pagina e fai in modo che dopo ogni lettera il suo valore venga mostrato in console.
