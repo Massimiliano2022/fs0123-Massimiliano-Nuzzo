@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Welcome to your exam</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="logo">
+            <img src="img/epicode_logo.png" alt="Logo Epicode" width="150">
+        </div>
+        <div id="sezione-result">
+            <p id="risultato" class="center">Result</p>
+            <p id="testo-risultato" class="center">The summary of your answers:</p>
+            <div id="result">
+                <div class="risultato" id="risposte-corrette">
+                    <p id="testo-corrette">Correct</p>
+                    <p id="corrette-percentuale">66.7%</p>
+                    <p id="corrette-question">4/6 questions</p>
+                </div>
+                <div class="risultato" id="div-esito">
+                    <!-- Circle bar progress -->
+                    <canvas id="circle-bar-progress"></canvas>
+                    <div id="circle-bar-progress-value"></div>
+                    <!-- Circle bar progress -->
+                </div>
+                <div class="risultato" id="risposte-sbagliate">
+                    <p id="testo-sbagliate">Wrong</p>
+                    <p id="sbagliate-percentuale">33.3%</p>
+                    <p id="sbagliate-question">2/6 questions</p>
+                </div>
+            </div>
+            <div id="button-rate" class="center">
+                <button id="'rateUs" onclick="votaci()">RATE US</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/result.js"></script>
+</body>
+
+</html>

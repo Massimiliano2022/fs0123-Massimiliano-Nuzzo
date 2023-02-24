@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Welcome to your exam</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="logo-quiz">
+            <img src="img/epicode_logo.png" alt="Logo Epicode" width="150">
+            <div id="timer">
+                <p class="testo-secondi">SECONDS</p>
+                <p id="timer-sec"></p>
+                <p class="testo-secondi">REMAINING</p>
+            </div>
+        </div>
+        <div id="sezione-quiz">
+            <div id="quiz">
+                <p id="domanda" class="center">Lorem ipsum dolor sit amet quae, hic?</p>
+            </div>
+            <div id="footer">
+                <div id="input">
+                    <p id="nDomanda">Numero domanda</p>
+                </div>
+                <div id="footer-button">
+                    <button id="conferma-btn" onclick="confermaRisposta()">CONFIRM</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/test.js"></script>
+</body>
+
+</html>

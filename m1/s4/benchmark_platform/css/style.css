@@ -1,0 +1,268 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* UTILTY */
+body{
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+}
+.colore-viola{
+    color:#C2128D;
+}
+p#intestazione{
+    font-size: 3.5rem;
+}
+p#domanda{
+    font-size: 1.5rem;
+    /*padding: 2rem;*/
+}
+p.sotto-titolo{
+    font-size: 1.5rem;
+    padding-top: 0.75rem;
+    font-weight: bold;
+}
+div.container{
+    background: url(../img/bg.jpg) no-repeat center center/cover;
+}
+div#logo{
+    height: 20vh;
+    padding: 2rem 4rem;
+}
+div#logo-quiz{
+    height: 20vh;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.center{
+    text-align:center;
+}
+div#footer button{
+    background: #00FFFF;
+    color: #0B113B;
+    font-weight: bold;
+    padding: 0.75rem 2.5rem;
+    border: 0;
+}
+/* UTILTY */
+
+/* SEZIONE PRINCIPALE */
+div#sezione-principale{
+    height:80vh;
+    padding: 0 4rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div#sezione-principale p#intestazione{
+    width: 40%;
+    margin-bottom: 1rem;
+    line-height: 75%;
+}
+div#sezione-principale p#intestazione span{
+    font-weight: bold;
+}
+div#sezione-principale p.testo{
+    width: 65%;
+}
+div#sezione-principale ul{
+    margin: 2rem 1.5rem;
+}
+div#sezione-principale div#footer{
+    display: flex;
+    align-items: center;
+}
+div#sezione-principale div#footer div#input{
+    flex:1;
+}
+/* SEZIONE PRINCIPALE */
+
+/* SEZIONE QUIZ */
+div#logo-quiz div#timer{
+    padding: 2rem;
+    background-color: transparent;
+    border: 5px solid #00FFFF;
+    width: 10%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+div#logo-quiz div#timer p.testo-secondi{
+    font-size:0.4rem;
+}
+div#logo-quiz div#timer p#timer-sec{
+    font-size:1.5rem;
+}
+div#sezione-quiz{
+    height:80vh;
+    padding: 0 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div#sezione-quiz div#quiz{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div#sezione-quiz div#quiz div.risposte-quiz button{
+    /*padding: 1rem 4rem;*/
+    margin: 1rem;
+    color: #fff;
+    background: #23294F;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    opacity: 0.75;
+
+    width: 200px;
+    height: 40px;
+}
+div#sezione-quiz div#quiz div.risposte-quiz button:hover{
+    background: #C2128D;
+    animation-duration: 5s;
+}
+div#sezione-quiz div#quiz div.risposte-quiz button#selected{
+    background: #C2128D;
+}
+div#sezione-quiz p.center{
+    padding-top:2rem;
+    padding-bottom:2rem;
+}
+div#sezione-quiz div#footer div#input p#nDomanda span{
+    color:#C2128D;
+}
+div#sezione-quiz div#footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+div#sezione-quiz div#footer div#input{
+    flex:1;
+    margin-top: 2rem;
+}
+div#sezione-quiz div#footer div#footer-button{
+    flex:1;
+    margin: 1rem;
+}
+/* SEZIONE QUIZ */
+
+/* SEZIONE RISULTATO */
+div#sezione-result{
+    height:80vh;
+    padding: 0 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div#sezione-result div#result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem 0;
+}
+
+div#sezione-result div#result div.risultato{
+    /*padding: 4rem;*/
+    margin: 0 4rem;
+}
+/*div#sezione-result div#div-esito{
+    border: 3px solid white;
+    border-radius: 50%;
+    background: #00FFFF;
+
+    padding:6rem;
+}
+
+div#sezione-result div#div-esito p {
+    font-size: 0.75rem;
+}*/
+
+div#sezione-result button{
+    margin-bottom: 1rem;
+    color: #fff;
+    background: transparent;
+    width: 25%;
+    border: 2px solid white;
+    padding: 0.75rem;
+}
+
+/* SEZIONE RISULTATO */
+
+/* SEZIONE REVIEW */
+
+div#sezione-review{
+    height:80vh;
+    padding: 0 4rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+div#sezione-review p{
+    margin:0.5rem 0;
+}
+
+div.valutazione-img{
+    text-align-last: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+div.valutazione-img img{
+    margin: 0.3rem;
+}
+
+div#sezione-review div#feedback{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div#sezione-review div#feedback input{
+    border: 0;
+    background: transparent;
+    border-bottom: 3px solid #C2128D;
+    width: 100%;
+    color: #fff;
+    margin: 2rem 0;
+}
+div#sezione-review div#feedback button{
+    background: #00FFFF;
+    color: #0B113B;
+    font-weight: bold;
+    padding: 0.75rem 2.5rem;
+    border: 0;
+}
+
+/* SEZIONE REVIEW */
+
+#circle-bar-progress-value {
+    position: absolute;
+    top: 55%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+    font-size: 100%;
+    font-weight: bold;
+  }
+  .coloreBlu {
+    color:#00FFFF;
+  }
+  .paragrafi-small{
+    font-size:0.5rem;
+  }
+  .star.color{
+    fill: #00FFFF;
+  }
