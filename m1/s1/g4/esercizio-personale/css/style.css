@@ -99,7 +99,7 @@ main ul, main ol{
 }
 main article iframe{
     width: 100%;
-    border-radius: 12%;
+    border-radius: 25px;
 }
 /* TABELLE */
 main table caption{
