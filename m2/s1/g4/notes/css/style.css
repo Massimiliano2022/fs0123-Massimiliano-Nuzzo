@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    background: #666666;
+    height: 100vh;
+    font-family: 'Indie Flower', cursive;
+}
+.riga {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.notes {
+    padding: 4rem;
+    height: 200px;
+    margin: 2rem;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+.notes p.task{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.riga:nth-child(1) > .notes:nth-child(1) {
+    background-color: #F8F8C6;
+    transform:rotate(4deg);
+}
+.riga:nth-child(1) > .notes:nth-child(2) {
+    background-color: #C8F8CA;
+    transform:rotate(-4deg);
+}
+.riga:nth-child(1) > .notes:nth-child(3) {
+    background-color: #BFC0E6;
+    transform:rotate(8deg);
+}
+.riga:nth-child(1) > .notes:nth-child(4) {
+    background-color: #C3EEC4;
+    transform:rotate(-8deg);
+}
+.riga:nth-child(2) > .notes:nth-child(1) {
+    background-color: #F9FAC8;
+    transform:rotate(3deg);
+}
+.riga:nth-child(2) > .notes:nth-child(2) {
+    background-color: #BEBFE3;
+    transform:rotate(-3deg);
+}
+.riga:nth-child(2) > .notes:nth-child(3) {
+    background-color: #F9F9C7;
+    transform:rotate(8deg);
+}
+.riga:nth-child(2) > .notes:nth-child(4) {
+    background-color: #C7F6C9;
+    transform:rotate(-8deg);
+}
+
+.riga:nth-child(1) > .notes:hover {
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    transform: scale(1.25);
+    position:relative;
+    z-index:5;
+    transition: transform .15s linear;
+}
+.riga:nth-child(2) > .notes:hover {
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    transform: scale(1.25);
+    position:relative;
+    z-index:5;
+    transition: transform .15s linear;
+}
