@@ -29,10 +29,6 @@ div.container{
 div#logo{
     height: 20vh;
     padding: 2rem 4rem;
-}
-div#logo-quiz{
-    height: 20vh;
-    padding: 2rem 4rem;
     display: flex;
     justify-content: space-between;
 }
@@ -49,6 +45,23 @@ div#footer button{
 /* UTILTY */
 
 /* SEZIONE PRINCIPALE */
+div#logo div#timer{
+    padding: 2rem;
+    background-color: transparent;
+    border: 5px solid #00FFFF;
+    width: 10%;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+div#logo div#timer p.testo-secondi{
+    font-size:0.4rem;
+}
+div#logo div#timer p#timer-sec{
+    font-size:1.5rem;
+}
 div#sezione-principale{
     height:80vh;
     padding: 0 4rem;
@@ -81,7 +94,7 @@ div#sezione-principale div#footer div#input{
 /* SEZIONE PRINCIPALE */
 
 /* SEZIONE QUIZ */
-div#logo-quiz div#timer{
+/*div#logo-quiz div#timer{
     padding: 2rem;
     background-color: transparent;
     border: 5px solid #00FFFF;
@@ -97,12 +110,12 @@ div#logo-quiz div#timer p.testo-secondi{
 }
 div#logo-quiz div#timer p#timer-sec{
     font-size:1.5rem;
-}
+}*/
 div#sezione-quiz{
     height:80vh;
     padding: 0 4rem;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
 }
@@ -157,7 +170,7 @@ div#sezione-result{
     height:80vh;
     padding: 0 4rem;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
 }
