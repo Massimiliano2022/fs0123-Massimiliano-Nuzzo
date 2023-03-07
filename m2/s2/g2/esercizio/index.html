@@ -5,14 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Agenzia Viaggi</title>
 </head>
 
 <body>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-secondary px-5">
+    <nav class="navbar navbar-expand-xl bg-body-tertiary px-5">
         <div class="container-fluid">
             <a class="navbar-brand" href="#home">
                 <svg id="logo-51" width="167" height="41" viewBox="0 0 167 41" fill="none"
@@ -68,12 +76,13 @@
                         <a class="nav-link" href="#offerte">Last Minute</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Recensioni</a>
+                        <a class="nav-link" href="#recensioni">Recensioni</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-info text-light" type="submit">Cerca</button>
+                    <input class="form-control me-2" type="search" placeholder="Cerca posti da sogno"
+                        aria-label="Search">
+                    <button class="btn btn-outline-danger" type="submit">Cerca</button>
                 </form>
             </div>
         </div>
@@ -115,50 +124,57 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-6">
-                    <h5>Saldi</h5>
+                    <h5 class="fs-4">Saldi</h5>
                 </div>
                 <div class="col-6">
-                    <p class="text-end fs-6 text-info">Nascondi sezione</p>
+                    <p class="fs-6 mb-1 text-info align-middle text-end">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#saldi_collapse" role="button"
+                            aria-expanded="false" aria-controls="saldi_collapse">
+                            Nascondi sezione
+                        </a>
+                    </p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-6 col-md-3 p-1">
-                    <div class="card border border-info">
-                        <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
-                        <div class="card-body">
-                            <h5 class="card-title">Titolo</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="btn btn-info">Prenota</a>
+            <div class="collapse show" id="saldi_collapse">
+                <div class="row gy-4 gx-4">
+                    <div class="col-6 col-md-3">
+                        <div class="card border border-info">
+                            <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
+                            <div class="card-body">
+                                <h5 class="card-title">Titolo</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-3 p-1">
-                    <div class="card border border-info">
-                        <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
-                        <div class="card-body">
-                            <h5 class="card-title">Titolo</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="btn btn-info">Prenota</a>
+                    <div class="col-6 col-md-3">
+                        <div class="card border border-info">
+                            <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
+                            <div class="card-body">
+                                <h5 class="card-title">Titolo</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-3 p-1">
-                    <div class="card border border-info">
-                        <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
-                        <div class="card-body">
-                            <h5 class="card-title">Titolo</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="btn btn-info">Prenota</a>
+                    <div class="col-6 col-md-3">
+                        <div class="card border border-info">
+                            <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
+                            <div class="card-body">
+                                <h5 class="card-title">Titolo</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-3 p-1">
-                    <div class="card border border-info">
-                        <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
-                        <div class="card-body">
-                            <h5 class="card-title">Titolo</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="btn btn-info">Prenota</a>
+                    <div class="col-6 col-md-3">
+                        <div class="card border border-info">
+                            <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
+                            <div class="card-body">
+                                <h5 class="card-title">Titolo</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -169,70 +185,77 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-6">
-                    <h5>Welcome Summer</h5>
+                    <h5 class="fs-4">Welcome Summer</h5>
                 </div>
                 <div class="col-6">
-                    <p class="text-end fs-6 text-info">Nascondi sezione</p>
+                    <p class="fs-6 mb-1 text-info align-middle text-end">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#welcome_collapse" role="button"
+                            aria-expanded="false" aria-controls="welcome_collapse">
+                            Nascondi sezione
+                        </a>
+                    </p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-6 col-lg-4">
-                    <div class="card shadow-lg my-2">
-                        <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
-                        <div class="card-body">
-                            <h5 class="card-title">Titolo</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="btn btn-info">Prenota</a>
+            <div class="collapse show" id="welcome_collapse">
+                <div class="row gy-4">
+                    <div class="col-6 col-lg-4">
+                        <div class="card shadow-lg">
+                            <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
+                            <div class="card-body">
+                                <h5 class="card-title">Titolo</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="card shadow-lg my-2">
-                        <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
-                        <div class="card-body">
-                            <h5 class="card-title">Titolo</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="btn btn-info">Prenota</a>
+                    <div class="col-6 col-lg-4">
+                        <div class="card shadow-lg">
+                            <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
+                            <div class="card-body">
+                                <h5 class="card-title">Titolo</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="card shadow-lg my-2">
-                        <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
-                        <div class="card-body">
-                            <h5 class="card-title">Titolo</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="btn btn-info">Prenota</a>
+                    <div class="col-6 col-lg-4">
+                        <div class="card shadow-lg">
+                            <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
+                            <div class="card-body">
+                                <h5 class="card-title">Titolo</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="card shadow-lg my-2">
-                        <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
-                        <div class="card-body">
-                            <h5 class="card-title">Titolo</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="btn btn-info">Prenota</a>
+                    <div class="col-6 col-lg-4">
+                        <div class="card shadow-lg">
+                            <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
+                            <div class="card-body">
+                                <h5 class="card-title">Titolo</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="card shadow-lg my-2">
-                        <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
-                        <div class="card-body">
-                            <h5 class="card-title">Titolo</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="btn btn-info">Prenota</a>
+                    <div class="col-6 col-lg-4">
+                        <div class="card shadow-lg">
+                            <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
+                            <div class="card-body">
+                                <h5 class="card-title">Titolo</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <div class="card shadow-lg my-2">
-                        <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
-                        <div class="card-body">
-                            <h5 class="card-title">Titolo</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                            <a href="#" class="btn btn-info">Prenota</a>
+                    <div class="col-6 col-lg-4">
+                        <div class="card shadow-lg">
+                            <img src="img/1.jpg" class="card-img-top" alt="Destinazione">
+                            <div class="card-body">
+                                <h5 class="card-title">Titolo</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -240,13 +263,17 @@
     </section>
     <section id="offerte" class="my-5 mx-5">
         <div class="container-fluid">
-            <h5>Offerta del giorno</h5>
-            <div class="card mb-3 border-opacity-10">
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="fs-4">Offerta del giorno</h5>
+                </div>
+            </div>
+            <div class="card mb-3 border border-1 border-opacity-10">
                 <div class="row g-0">
-                    <div class="col-sm-6">
+                    <div class="col-sm-8">
                         <img src="img/1.jpg" class="img-fluid rounded-start" alt="Destinazione">
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <div class="card-body">
                             <h5 class="card-title fs-1 fw-light">Fushifaru Maldives</h5>
                             <p class="card-text fs-5 fw-light"><small class="text-muted">15.01.2021 - 31.01.2021</small>
@@ -262,32 +289,225 @@
     </section>
     <section id="last-minute" class="my-5 mx-5">
         <div class="container-fluid">
-            <h5>Last Minute</h5>
             <div class="row">
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="img/1.jpg" class="img-fluid rounded-start" alt="Destinazione">
+                <div class="col-12">
+                    <h5 class="fs-4">Last Minute</h5>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="img/1.jpg" class="img-fluid rounded-start" alt="Destinazione">
+            </div>
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="img/1.jpg" class="img-fluid rounded" alt="Destinazione">
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="img/1.jpg" class="img-fluid rounded-start" alt="Destinazione">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="img/1.jpg" class="img-fluid rounded" alt="Destinazione">
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="img/1.jpg" class="img-fluid rounded-start" alt="Destinazione">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="img/1.jpg" class="img-fluid rounded" alt="Destinazione">
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="img/1.jpg" class="img-fluid rounded-start" alt="Destinazione">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="img/1.jpg" class="img-fluid rounded" alt="Destinazione">
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-2">
-                    <img src="img/1.jpg" class="img-fluid rounded-start" alt="Destinazione">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="img/1.jpg" class="img-fluid rounded" alt="Destinazione">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="img/1.jpg" class="img-fluid rounded" alt="Destinazione">
                 </div>
             </div>
         </div>
     </section>
+    <section id="recensioni" class="my-5 mx-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="text-center fs-2">Dicono di noi</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-1">
+                            <!--<i class="bi bi-person-circle fs-1 text-info"></i>-->
+                            <div class="text-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#0dcaf0"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-11">
+                            <p>Username</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ratione et nihil officiis
+                                incidunt placeat minus voluptatem aspernatur vel facere iste doloremque, delectus ullam
+                                voluptatum quo voluptates provident accusamus, commodi accusantium quam aliquam ab
+                                consequuntur nemo. Mollitia quo enim maiores?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-1">
+                            <!--<i class="bi bi-person-circle fs-1 text-info"></i>-->
+                            <div class="text-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#0dcaf0"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-11">
+                            <p>Username</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ratione et nihil officiis
+                                incidunt placeat minus voluptatem aspernatur vel facere iste doloremque, delectus ullam
+                                voluptatum quo voluptates provident accusamus, commodi accusantium quam aliquam ab
+                                consequuntur nemo. Mollitia quo enim maiores?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-1">
+                            <!--<i class="bi bi-person-circle fs-1 text-info"></i>-->
+                            <div class="text-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#0dcaf0"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-11">
+                            <p>Username</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ratione et nihil officiis
+                                incidunt placeat minus voluptatem aspernatur vel facere iste doloremque, delectus ullam
+                                voluptatum quo voluptates provident accusamus, commodi accusantium quam aliquam ab
+                                consequuntur nemo. Mollitia quo enim maiores?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-1">
+                            <!--<i class="bi bi-person-circle fs-1 text-info"></i>-->
+                            <div class="text-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#0dcaf0"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-11">
+                            <p>Username</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ratione et nihil officiis
+                                incidunt placeat minus voluptatem aspernatur vel facere iste doloremque, delectus ullam
+                                voluptatum quo voluptates provident accusamus, commodi accusantium quam aliquam ab
+                                consequuntur nemo. Mollitia quo enim maiores?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-1">
+                            <!--<i class="bi bi-person-circle fs-1 text-info"></i>-->
+                            <div class="text-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#0dcaf0"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-11">
+                            <p>Username</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ratione et nihil officiis
+                                incidunt placeat minus voluptatem aspernatur vel facere iste doloremque, delectus ullam
+                                voluptatum quo voluptates provident accusamus, commodi accusantium quam aliquam ab
+                                consequuntur nemo. Mollitia quo enim maiores?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-1">
+                            <!--<i class="bi bi-person-circle fs-1 text-info"></i>-->
+                            <div class="text-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#0dcaf0"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-11">
+                            <p>Username</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ratione et nihil officiis
+                                incidunt placeat minus voluptatem aspernatur vel facere iste doloremque, delectus ullam
+                                voluptatum quo voluptates provident accusamus, commodi accusantium quam aliquam ab
+                                consequuntur nemo. Mollitia quo enim maiores?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="d-flex justify-content-center align-middle p-5" style="background: #222428;">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-outline-secondary mb-3"
+                        onclick="mostraForm()">Contattaci</button>
+                </div>
+            </div>
+            <div class="col-12">
+                <div id="form-contatti" class="d-none">
+                    <div class="mb-2">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <p class="text-light text-center m-0">&#169; 2023 Kalina Travel LTD. All Rights Resrved</p>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script>
+        numeroViaggi();
+
+        function numeroViaggi() {
+            let cardViaggi = document.getElementsByClassName('card-body')
+            alert(cardViaggi.length);
+        }
+
+        function mostraForm() {
+            let formContatti = document.getElementById('form-contatti');
+
+            if (formContatti.classList.contains('d-none')) {
+                formContatti.classList.remove('d-none');
+            } else {
+                formContatti.classList.add('d-none');
+            }
+
+        }
+
+    </script>
 </body>
 
 </html>
