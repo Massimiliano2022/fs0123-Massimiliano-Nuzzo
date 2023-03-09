@@ -1,0 +1,14 @@
+creo 
+-custom.scss
+-bootstrap-ovverides.scss
+
+in bootstrap-ovverides.scss seguo la guida opzion b e importo tutto bootstrap e eseguo le mie modifiche
+in custom.scss importo bootstrap-ovverides.scss
+
+cosi sulla documentazione
+@import "../node_modules/bootstrap/scss/functions";
+a noi sara cosi
+@import "../bootstrap/scss/functions";
+
+ovverrides di variable va dopo di function e prima di variables
+merge di map dopo variables
